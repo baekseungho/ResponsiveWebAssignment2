@@ -1,0 +1,271 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.visually-hidden{
+  display: none;
+}
+header{
+  position:sticky;
+  top: 0;
+  z-index: 10;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: skyblue;
+  padding: 10px 0;
+}
+.logo img{
+  width:50px;
+  margin-left:20px;
+}
+.gnb-list{
+  display:flex;
+  justify-content: space-between;
+  width:300px;
+  margin-right: 30px;
+}
+.gnb-item a{ 
+  color:#FFF;
+  font-weight: 700;
+  font-size:16px;
+  transition: color 300ms ease-in-out;
+}
+
+.gnb-item a:hover{
+  color:dodgerblue;
+}
+.background{
+  height:500px;
+  background-image:url(./images/스누피배경.jpeg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+  text-align: center;
+}
+.main-title{
+  font-size:48px;
+}
+.main-content,.main-btn{
+  margin-top: 10px;
+}
+.main-btn{
+  border:none;
+  font-size:16px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding:10px
+}
+.post-box{
+  display: flex;
+}
+.post-card{
+  position: relative;
+  top:-80px;
+  background-color: rgb(217,241,254);
+  width:80%;
+  margin:20px auto;
+  padding:30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width:600px;
+  min-width:300px;
+}
+.fixed-back{
+  height:600px;
+  background-color: rgb(217,241,254);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back1,.back2{
+  width:500px;
+  height:500px;
+  background-color: #fff;
+}
+.back1{
+  background-image: url(./images/스누피2.png);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position:bottom left 450px;
+  margin-right: 20px;
+}
+.back2{
+  background-image: url(./images/pngegg.png);
+  background-size:500px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position:bottom right 400px;
+  margin-left: 20px;
+}
+
+footer{
+  background-color:skyblue;
+  padding:20px 0;
+}
+.footer-wrapper{
+  width:90%;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-wrapper h3{
+  color:#fff;
+}
+.footer-list{
+  display:flex;
+}
+.footer-item{
+  margin-right:20px;
+}
+.footer-item:last-child{
+  margin-right: 0;
+}
+.footer-item i{
+  font-size:24px;
+  color:white;
+  transition:color 300ms ease-in-out;
+}
+.footer-item i:hover{
+  color:dodgerblue;
+}
+.top-btn i{
+  position:fixed;
+  bottom:30px;
+  right:30px;
+  font-size:38px;
+  color:rgb(41,127,161);
+}
+.side-menu{
+  position:fixed;
+  top:100px;
+  right:50px;
+  width:200px;
+  background-color:#fff;
+  border-radius: 5px;
+  box-shadow:5px 5px 5px #888;
+  text-align: center;
+  padding:10px 0;
+}
+.side-menu-item{
+  padding:10px 0;
+}
+.side-menu-item a{
+  color:#888;
+  transition: all 600ms ease-in-out;
+}
+.side-menu-item a:hover{
+  color:dodgerblue;
+  text-decoration: underline;
+}
+
+@media screen and (max-width : 1200px){
+  nav,footer{
+    background-color:rgb(75, 187, 235);
+  }
+  .background h3{
+    font-size:40px;
+  }
+  .post-box{
+    display: flex;
+    flex-direction: column;
+  }
+  .side-menu{
+    top:250px;
+    right:40px;
+    width:150px;
+    font-size:90%;
+  }
+  .background p{
+    width:60%;
+  }
+  .fixed-back{
+    height:700px;
+    flex-direction: column;
+  }
+  .back1{
+    background-size: 430px;
+    width:100%;
+    background-position:center;
+    margin-right: 0;
+    margin-bottom:0;
+  }
+  .back2{
+    display:none;
+    background-size:480px;
+    background-position:bottom right 250px;
+    margin-left: 0;
+    margin-top:15px;
+  }
+}
+
+@media screen and (max-width : 768px){
+  nav,footer{
+    background-color:rgb(35, 157, 235);
+  }
+  .post-box{
+    display: flex;
+    flex-direction: column;
+  }
+  .background h3{
+    font-size:30px;
+  }
+  .side-menu{
+    top:250px;
+    right:15px;
+    width:100px;
+    height:150px;
+    font-size:80%;
+    padding:3px;
+  }
+  .post-card{
+    width:60%;
+    min-width:350px;
+    font-size:80%;
+  }
+  .back1,.back2{
+    width:400px;
+    height:400px;
+  }
+  .fixed-back{
+    height:500px;
+    flex-direction: column;
+  }
+  .back1{
+    background-size: 350px;
+    width:100%;
+    background-position:bottom;
+    margin-right: 0;
+    
+  }
+  .back2{
+    display:none;
+    background-size:400px;
+    background-position:bottom right 250px;
+    margin-left: 0;
+    margin-top:15px;
+  }
+  .footer-wrapper{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer-item{
+    margin:10px;
+  }
+}
